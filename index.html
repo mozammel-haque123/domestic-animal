@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo.webp" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Beautiful view of animals</title>
+</head>
+<body>
+        <!-- navver -->
+
+        <div class="navbar bg-base-100 max-w-screen-xl flex justify-around m-0 m-auto">
+            <div class="">
+              <div class="dropdown">
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+  <div class="flex w-7">
+    <img src="file:///C:/Users/ausa/Downloads/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/logo.webp" alt="">
+    <a class=" mx-2 font-bold text-xl">Peddy</a>
+  </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="">
+              <a class="btn rounded-full"><i class="fa-regular fa-user"></i></a>
+            </div>
+          </div>
+    
+          <!-- text -->
+    
+    
+    <p class="text-center mt-5 font-bold text-slate-500">Bringing Families Together🔥 </p>
+    
+    <div><h1 class="text-6xl font-semibold text-center mt-6">Your Path to Adoption <br> Starts Here</h1></div>
+    
+    <div class="text-center"><p class=" mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.</p></div>
+    <div class="text-center mt-5"><button class="bg-emerald-800 btn text-white" onclick="scrollToSection()">View More</button></div>
+
+
+<div class="flex flex-col items-center justify-center text-center">
+  <div>
+    <img class="" src="assets/pet.webp" alt="Pet Image">
+  </div>
+  <h1 class="font-bold text-2xl">Adopt Your Best Friend</h1>
+  <p class="mt-2 max-w-xl">
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.
+  </p>
+</div>
+<!-- bacik end -->
+
+<!-- main content start -->
+
+<!-- animals button data -->
+
+<section class="max-w-11/12 mx-auto">
+  <div id="button-data"
+       class=" my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center items-center">
+  </div>
+</section>
+
+<!-- in text && button -->
+
+<div id="creat-btn" class="max-w-11/12 mx-auto flex justify-between items-center my-6">
+   
+</div>
+
+<!-- hiddin loding -->
+<div id="hidden-loding" class="mx-auto w-full max-w-lg rounded-md p-4 hidden">
+    <div class="flex animate-pulse space-x-4">
+      <div class="size-10 rounded-full bg-gray-200"></div>
+      <div class="flex-1 space-y-6 py-1">
+        <div class="h-2 rounded bg-gray-200"></div>
+        <div class="space-y-3">
+          <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-2 h-2 rounded bg-gray-200"></div>
+            <div class="col-span-1 h-2 rounded bg-gray-200"></div>
+          </div>
+          <div class="h-2 rounded bg-gray-200"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- animals Data -->
+<section id="target-section" class="w-11/12 mx-auto flex flex-col lg:flex-row gap-3 my-6"> 
+  <div id="animals-Data"class="w-full lg:w-9/12 grid gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+   </div> 
+ 
+   <div 
+   id="said-Clic-shodata"
+   class="w-full lg:w-3/12 grid grid-cols-2 gap-3 grid-flow-dense auto-rows-[100px] min-h-[300px] md:min-h-[300px] lg:h-auto shadow-[inset_-12px_-8px_40px_#46464620] rounded-xl p-3"
+  >
+  </div> 
+ </section>
+
+ <!-- adopt-Btn -->
+ <section id="adopt-Btn">
+
+ <dialog id="my_modal_2" class="modal">
+   <div class="modal-box text-center">
+    <div class="text-center font-bold">
+     <div class="flex justify-center">
+      <img src="https://img.icons8.com/?size=160&id=110578&format=png" alt="">
+     </div>
+      <h1 class="text-4xl">Congrates</h1>
+      <p class="my-2">add option prices is start for you ped</p>
+    </div>
+     <span class="countdown font-mono text-6xl">
+       <span id="countdownSpan" style="--value:3;" aria-live="polite" aria-label="3">3</span>
+     </span>
+   </div>
+   <form method="dialog" class="modal-backdrop">
+     <button>close</button>
+   </form>
+ </dialog>
+ </section>
+
+ <!-- show Pet Modal Html -->
+<section>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="show-Pet-Details">
+
+    </div>
+    <div class="text-center">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn w-full bg-green-100 text-green-700">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+</section>
+
+<!--  not data && amti data -->
+
+<section id="amti-data" class="">
+
+</section>
+
+
+
+<!-- main content end -->
+<!-- footter -->
+<footer class="footer bg-base-300 text-base-content p-10 flex justify-around max-sm:flex-col bg-black">
+    <div class="text-white">
+      <div class="flex text-white"><img src="file:///C:/Users/ausa/Downloads/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main/images/logo.webp" alt="">
+        <h6 class="footer-title ml-3">Peddy</h6></div>
+      <a class="link link-hover">Location: av. Washington 165, NY CA 54003</a>
+      <a class="link link-hover">Phone: +31 85 964 47 25</a>
+      <a class="link link-hover">Email: info@yourdomain.com</a>
+      <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+      <div class="grid grid-flow-col gap-4">
+        <a>
+            <i class="fa-brands fa-facebook text-sky-500"></i>
+        <a>
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a>
+            <i class="fa-brands fa-youtube text-red-600"></i>
+        </a>
+        <a>
+            <i class="fa-brands fa-instagram text-red-400"></i>
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="text-white">
+
+      <h6 class="footer-title">Useful Links</h6>
+      <a class="link link-hover">Home</a>
+      <a class="link link-hover">  About Us</a>
+      <a class="link link-hover"> Animals</a>
+      <a class="link link-hover">  Foundation</a>
+      <a class="link link-hover">   Contact</a>
+    </div>
+
+    <div>
+      <h6 class="footer-title text-white">Drop a Message</h6>
+      <input class="py-2 px-1 rounded-lg bg-gray-500" type="email" name="email" id="" placeholder="Enter your email">
+      <button class="btn bg-emerald-600 text-white border-none">Subscribe</button>
+    
+    </div>
+  </footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
