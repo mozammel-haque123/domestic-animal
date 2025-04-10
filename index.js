@@ -1,6 +1,3 @@
-// console.log('hello')
-
-// let objetString = ["Dog", "Cat", "Rabbit",]
 
 const outLoding = ()=>{
     const hiddenLoding = document.getElementById('hidden-loding')
@@ -18,11 +15,9 @@ const inLoding = ()=>{
     animalsData.classList.remove('hidden');
 }
 
-
 const animalsLodingData = ()=>{
     inLoding()
     animalsData()
-    console.log('hello')
 }
 
 // button click active class add and remove
@@ -32,7 +27,6 @@ const removeClass = () => {
       element.classList.remove('active');
     }
   };
-
 
   function scrollToSection() {
     document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });
@@ -100,9 +94,7 @@ const faveIcons = (fv) => {
   }
 
 //   adopt Btn
-const adoptBtn = (id) => {
-    console.log(id);
-  
+const adoptBtn = (id,q) => { 
     // Show modal
     my_modal_2.showModal();
   
@@ -124,13 +116,12 @@ const adoptBtn = (id) => {
     const interval = setInterval(() => {
       count--;
   
-      if (count >= 0) {
+      if (count >= 1) {
         countdownSpan.style.setProperty("--value", count);
         countdownSpan.setAttribute("aria-label", count);
         countdownSpan.textContent = count;
       } else {
         clearInterval(interval);
-  
         //  Close the modal automatically
         my_modal_2.close();
   
@@ -139,6 +130,12 @@ const adoptBtn = (id) => {
           hid.classList.add("hidden");
         }
       }
+      if (count === 0) {
+        q.setAttribute('disabled',true)
+      }
+      if(q){
+        q.classList.add('text-gray-600');
+      }
     }, 1000);
   };
   
@@ -146,7 +143,6 @@ const adoptBtn = (id) => {
 // show Pet Details html modal 
 
 const showPetModalHtml = (dms)=>{
-    console.log(dms)
  const showPetDetails = document.getElementById('show-Pet-Details')
     showPetDetails.innerHTML = `
     <img class='w-full rounded-lg' src="${dms?.image || 'N/M'}">
@@ -175,7 +171,6 @@ const showPetModalHtml = (dms)=>{
 
 // animals Data Html
 const animalsDataHtml = (ad) =>{
-// console.log(ad)
 const animalsData = document.getElementById('animals-Data')
 animalsData.innerHTML = ''
 if(ad.length === 0 || ad === ''){
@@ -197,7 +192,6 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
 
 ad.forEach((a) =>{
 const creatDiv = document.createElement('div')
-// console.log(a)
 creatDiv.classList.add('card','bg-base-100','shadow-[0_3px_10px_rgb(0,0,0,0.2)]','p-4','rounded-md')
 creatDiv.innerHTML = `       
     <figure>
@@ -212,7 +206,7 @@ creatDiv.innerHTML = `
         <div class="my-4"><hr></div>
         <div class="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center items-center">
             <button class="btn" onclick="faveIcons('${a?.image}')"><i class="fa-regular fa-thumbs-up"></i></button>
-            <button class="btn text-emerald-600 btn-${a.petId}" onclick="adoptBtn('${a.petId}')">Adopt</button>
+            <button class="btn text-emerald-600 btn-${a.petId}" onclick="adoptBtn('${a.petId}',this)">Adopt</button>
             <button class="btn text-emerald-600" onclick="showPetDetails('${a.petId}')">Details</button>
         </div>
     </div>
@@ -226,7 +220,6 @@ animalsData.append(creatDiv)
 
 //  button html
 const animalsHtmlData = (bto) => {
-// console.log(bto)
 const buTton = document.getElementById('button-data');
 bto.forEach((b) => {
     const creatBtn = document.createElement('div');
